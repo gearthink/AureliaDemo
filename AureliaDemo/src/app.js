@@ -1,13 +1,17 @@
-﻿export class Welcome {
-    heading = 'Welcome to the Aurelia Navigation App!';
-    firstName = 'Travis';
-    lastName = 'Matthews';
+﻿import {inject} from 'aurelia-framework';
+import {Router} from 'aurelia-router';
+import 'bootstrap';
+import 'bootstrap/css/bootstrap.css!';
 
-    get fullName(){
-        return `${this.firstName} ${this.lastName}`;
-    }
-
-    welcome(){
-        alert(`Welcome, ${this.fullName}!`);
-    }
+@inject(Router)
+export class App {
+    constructor(router) {
+        this.router = router;
+        this.router.configure(config => {
+            config.title = 'Aurelia';
+        config.map([
+          { route: ['','welcome'],  moduleId: './welcome',      nav: true, title:'Welcome' }
+        ]);
+    });
+}
 }

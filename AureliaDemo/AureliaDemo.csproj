@@ -109,6 +109,8 @@
     <Content Include="protractor.conf.js" />
     <Content Include="src\app.html" />
     <Content Include="src\app.js" />
+    <Content Include="src\welcome.html" />
+    <Content Include="src\welcome.js" />
     <Content Include="src_demo\app.html" />
     <Content Include="src_demo\app.js" />
     <Content Include="src_demo\child-router.html" />
